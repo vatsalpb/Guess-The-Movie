@@ -26,9 +26,9 @@ public class Main {
             }
         }
 
-        System.out.println(titleCharList);
-        System.out.println(uniqueChar);
-
+        //System.out.println(titleCharList);
+        //System.out.println(uniqueChar);
+        //System.out.println("The movie title: " + movieTitle);
 
         System.out.println("I have randomly chosen a Movie title");
         System.out.println("Try to guess it.");
@@ -66,9 +66,10 @@ public class Main {
             System.out.println("Hidden movie array: " + String.valueOf(hiddenArray));
             if (count == 10) {
                 System.out.println("You have ran out of guess, good luck next time.");
+                System.out.println("The movie title is: " + movieTitle);
                 break;
             } else if (uniqueChar.size() == 1) {
-                System.out.println("You have guesse the movie title, Congratulation");
+                System.out.println("You have guessed the correct movie title, Congratulation");
                 break;
             }
         }
