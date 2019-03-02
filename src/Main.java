@@ -71,7 +71,7 @@ public class Main
             }
             System.out.println("You have entered (" + count + ") wrong: " + wrong);
             System.out.println("Hidden movie array: " + String.valueOf(hiddenArray));
-            if (count == 10)
+            if (count == 8)
             {
                 System.out.println("You have ran out of guess, good luck next time.");
                 System.out.println("The movie title is: " + movieTitle);
