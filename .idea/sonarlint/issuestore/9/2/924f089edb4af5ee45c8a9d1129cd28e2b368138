@@ -1,0 +1,9 @@
+
+n
+squid:S135,"YReduce the total number of break and continue statements in this loop to use at most one.(¤èÄ7
+bsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(ÇÙó
+asquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(‘‚‰+
+bsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(ëÔÚ
+isquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÛÛ¯ø
+4squid:S2119s"Save and re-use this "Random".(¼İÅf
+Usquid:S1155O">Use isEmpty() to check whether the collection is empty or not.(İÙ®
