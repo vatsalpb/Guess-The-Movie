@@ -16,6 +16,7 @@ public class Main
         String hiddenMovie = "";
         List<Character> titleCharList = new ArrayList<>();
         Set<Character> uniqueChar = new HashSet<>();
+        Set<Character> oldChar = new HashSet<>();
 
         for (char charArray : movieTitle.toCharArray())
         {
@@ -65,11 +66,16 @@ public class Main
                     hiddenArray[find] = c;
                 }
                 uniqueChar.remove(c);
+                oldChar.add(c);
                 //System.out.println("Unique character: " + uniqueChar);
-            } else
+            }
+            else
             {
-                count++;
-                wrong.append(c);
+                if(!oldChar.contains(c))
+                {
+                    count++;
+                    wrong.append(c);
+                }
             }
             System.out.println("You have entered (" + count + ") wrong: " + wrong);
             System.out.println("Hidden movie array: " + String.valueOf(hiddenArray));
