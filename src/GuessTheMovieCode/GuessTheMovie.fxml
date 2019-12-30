@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import java.net.URL?>
+<GridPane fx:controller="GuessTheMovieCode.GuessTheMovieController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+    <padding>
+        <Insets top="25" right="25" bottom="10" left="25"/>
+    </padding>
+    <gridLinesVisible>true</gridLinesVisible>
+    <stylesheets>
+        <URL value="@GuessTheMovie.css"/>
+    </stylesheets>
+
+    <Label text="Enter a Letter:"
+           GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+    <TextField onAction="#handleTextFieldAction" fx:id="textField"
+               GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Word:"
+           GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <Text fx:id="actiontarget"
+          GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="Guess:"
+           GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <Text fx:id="guessAction"
+          GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    <Label text="Misses:"
+           GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <Text fx:id="missAction"
+          GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+</GridPane>
