@@ -14,7 +14,6 @@ public class GuessTheMovie extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("GuessTheMovie.fxml"));
-
         Scene scene = new Scene(root, 300, 275);
         stage.setTitle("Guess the Movie Title");
         stage.setScene(scene);

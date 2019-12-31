@@ -1,6 +1,4 @@
-package JavaFxCode;
-
-import GuessTheMovieCode.RandomMovieTitle;
+package GuessTheMovieCode;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -8,27 +6,32 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Main
+public class GuessTheMovieModel
 {
-    public static void main(String[] args)
-    {
-        String movieTitle = new RandomMovieTitle().getMovieTitle();
-        List<Character> titleCharList = new ArrayList<>();
-        Set<Character> uniqueChar = new HashSet<>();
-        Set<Character> oldChar = new HashSet<>();
-        Set<Character> wrong = new HashSet<>();
-        String hiddenMovie = "";
-        hiddenMovie = getString(movieTitle, hiddenMovie, titleCharList, uniqueChar);
+    String movieTitle = new RandomMovieTitle().getMovieTitle();
+    List<Character> titleCharList = new ArrayList<>();
+    Set<Character> uniqueChar = new HashSet<>();
+    Set<Character> oldChar = new HashSet<>();
+    Set<Character> wrong = new HashSet<>();
+    String hiddenMovie = "";
+    hiddenMovie =
 
-        System.out.println("I have randomly chosen a Movie title");
-        System.out.println("Try to guess it.");
+    getString(movieTitle, hiddenMovie, titleCharList, uniqueChar);
+
+//        System.out.println("I have randomly chosen a Movie title");
+//        System.out.println("Try to guess it.");
         System.out.println(hiddenMovie);
-        char[] hiddenArray = hiddenMovie.toCharArray();
+    char[] hiddenArray = hiddenMovie.toCharArray();
 
-        Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
 
-        int count = 0;
+    int count = 0;
 
+    testmethod(movieTitle, titleCharList, uniqueChar, oldChar, wrong, hiddenArray, scanner, count);
+
+
+    private static void testmethod(String movieTitle, List<Character> titleCharList, Set<Character> uniqueChar, Set<Character> oldChar, Set<Character> wrong, char[] hiddenArray, Scanner scanner, int count)
+    {
         while (true)
         {
             System.out.println("Enter a character ");
