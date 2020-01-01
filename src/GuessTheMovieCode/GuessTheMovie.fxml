@@ -38,6 +38,9 @@
     <Text fx:id="missedCharacters"
           GridPane.columnIndex="1" GridPane.rowIndex="3"/>
 
-    <Button fx:id="restart" text="Click to Restart" onMouseClicked="#handleRestart"
+    <Button text="Click to Restart" onMouseClicked="#handleRestart"
             GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Text fx:id="winningLabel"
+          GridPane.columnIndex="1" GridPane.rowIndex="5"/>
 </GridPane>

@@ -1,5 +1,7 @@
 package GuessTheMovieCode;
 
+import javafx.beans.property.SimpleStringProperty;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -15,6 +17,8 @@ public class GuessTheMovieModel
     private String hiddenMovie = "";
     private int count = 0;
     private final char[] hiddenArray;
+    private SimpleStringProperty winning = new SimpleStringProperty(this, "winning");
+    private SimpleStringProperty hiddenArrayString = new SimpleStringProperty(this, "hiddenArrayString");
 
     /**
      * Constructor for GuessTheMovieModel
@@ -25,9 +29,7 @@ public class GuessTheMovieModel
         uniqueChar = new HashSet<>();
         oldChar = new HashSet<>();
         wrong = new HashSet<>();
-        //TODO clean up this code.
-        //movieTitle = new RandomMovieTitle().getMovieTitle();
-        movieTitle = "fargo";
+        movieTitle = new RandomMovieTitle().getMovieTitle();
         hiddenMovie = getString(movieTitle, hiddenMovie, titleCharList, uniqueChar);
         hiddenArray = hiddenMovie.toCharArray();
     }
@@ -76,8 +78,10 @@ public class GuessTheMovieModel
         {
             System.out.println("You have ran out of guess, good luck next time.");
             System.out.println("The movie title is: " + movieTitle);
+            winning.set("The movie title is: " + movieTitle);
         } else if (uniqueChar.isEmpty())
         {
+            winning.set("Congratulation");
             System.out.println("You have guessed the correct movie title, Congratulation");
         }
     }
@@ -115,8 +119,14 @@ public class GuessTheMovieModel
         return wrong;
     }
 
-    public char[] getHiddenArray()
+    public SimpleStringProperty getHiddenArray()
     {
-        return hiddenArray;
+        hiddenArrayString.set(String.valueOf(hiddenArray));
+        return hiddenArrayString;
+    }
+
+    public SimpleStringProperty getWinning()
+    {
+        return  winning;
     }
 }
